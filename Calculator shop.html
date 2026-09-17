@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Calculator</title>
+</head>
+<body>
+
+<script>
+    
+    var rice = "Rice";
+    var riceprice = 100;
+    var ricequantity = 2;
+    var rcost = riceprice * ricequantity;
+
+    var wheat = "Wheat";
+    var wheatprice = 150;
+    var wheatquantity = 2;
+    var wcost = wheatprice * wheatquantity;
+
+    var sugar = "Sugar";
+    var sugarprice = 70;
+    var sugarquantity = 3;
+    var scost = sugarprice * sugarquantity;
+
+    var total = rcost + wcost + scost;
+
+    console.log(rice);
+    console.log("Price", riceprice);
+    console.log("Quantity", ricequantity);
+    console.log("Cost", rcost);
+
+    console.log(wheat);
+    console.log("Price", wheatprice);
+    console.log("Quantity", wheatquantity);
+    console.log("Cost", wcost);
+
+    console.log(sugar);
+    console.log("Price", sugarprice);
+    console.log("Quantity", sugarquantity);
+    console.log("Cost", scost);
+
+    console.log("Total", total);
+
+    ricequantity = 4;
+    rcost = riceprice * ricequantity;
+
+    total = rcost + wcost + scost;
+
+    console.log("Updated Rice Quantity", ricequantity);
+    console.log("Updated Rice Cost", rcost);
+    console.log("Updated Total", total);
+</script>
+</body>
+</html>
