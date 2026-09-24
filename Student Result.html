@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Dashboard</title>
+</head>
+<body>
+    <script>
+    let students = [
+    {name: "Arun", score: 75},
+    {name: "Anu", score: 55},
+    {name: "Rahul", score: 92},
+    {name: "Meera", score: 35},
+    {name: "John", score: 68}
+];
+
+function myFunction() {
+    
+    document.write("Student Names:<br>");
+
+    students.forEach(function(student) {
+        document.write(student.name + "<br>");
+    });
+
+    document.write("<br>Students who scored more than 60:<br>");
+
+    let above60 = students.filter(function(student) {
+        return student.score > 60;
+    });
+
+    above60.forEach(function(student) {
+        document.write(student.name + "<br>");
+    });
+
+    let total = 0;
+
+    students.forEach(function(student) {
+        total = total + student.score;
+    });
+
+    document.write("<br>Total Score: " + total + "<br>");
+
+    let passed = students.filter(function(student) {
+        return student.score > 35;
+    });
+
+    document.write("<br>All students passed: " + (passed.length == students.length) + "<br>");
+
+    let above90 = students.filter(function(student) {
+        return student.score > 90;
+    });
+
+    document.write("<br>Student scored more than 90: " + (above90.length > 0) + "<br>");
+
+    students.sort(function(a, b) {
+        return b.score - a.score;
+    });
+
+    document.write("<br>Sorted scores:<br>");
+
+    students.forEach(function(student) {
+        document.write(student.name + " - " + student.score + "<br>");
+    });
+}
+
+myFunction();
+
+</script>
+</body>
+</html>
