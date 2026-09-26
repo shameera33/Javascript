@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Reminder</title>
+</head>
+<body>
+    <script>
+
+let input = prompt("Enter a past date (YYYY-MM-DD):");
+
+let d = new Date(input);
+let today = new Date();
+
+let year = d.getFullYear();
+let month = d.getMonth();
+let day = d.getDate();
+
+let months = [
+    "January", "February", "March",
+    "April", "May", "June",
+    "July", "August", "September",
+    "October", "November", "December"
+];
+
+let years = today.getFullYear() - year;
+
+document.write("Year: " + year + "<br>");
+document.write("Month: " + months[month] + "<br>");
+document.write("Day: " + day + "<br>");
+document.write("Full years passed: " + years + "<br>");
+
+</script>
+</body>
+</html>
