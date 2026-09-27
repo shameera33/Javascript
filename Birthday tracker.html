@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Tracker</title>
+</head>
+<body>
+    <h1>Birthday Tracker</h1>
+    <h3>Birthday Details</h3>
+
+    <script>
+
+        let friend = {
+            name: "John",
+            birthDate: "1999-07-05"
+        };
+
+        function getBirthdayDetails(friend) {
+
+            let birth = new Date(friend.birthDate);
+            let today = new Date();
+
+            let year = birth.getFullYear();
+            let month = birth.getMonth();
+            let day = birth.getDate();
+
+            let months = [
+                "January", "February", "March",
+                "April", "May", "June",
+                "July", "August", "September",
+                "October", "November", "December"
+            ];
+
+            let age = today.getFullYear() - year;
+
+            document.write("Name: " + friend.name + "<br>");
+            document.write("Birth Date: " + friend.birthDate + "<br>" + "<br>");
+
+            document.write(
+                friend.name + " was born on " +
+                day + " " + months[month] + ", " +
+                year + " and is " + age + " years old."
+            );
+        }
+
+        getBirthdayDetails(friend);
+
+    </script>
+</body>
+</html>
