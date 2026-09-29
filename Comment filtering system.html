@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment filtering system</title>
+</head>
+<body>
+    <script>
+    
+    function filterComment(comment) {
+
+    let bannedWords = /bad|ugly|stupid/i;
+    let bannedWordPresent = bannedWords.test(comment);
+
+    let cleanComment = comment.replace(/bad|ugly|stupid/gi, "***");
+
+    let numbers = comment.match(/\d+/g);
+    let numberCount = numbers ? numbers.length : 0;
+
+    let capitalWords = comment.match(/\b[A-Z][a-z]*\b/g);
+    let capitalCount = capitalWords ? capitalWords.length : 0;
+    
+    return "User comment: " + comment +
+           "\nPresent of banned word: " + bannedWordPresent +
+           "\nCleaned comment: " + cleanComment +
+           "\nNumber count: " + numberCount +
+           "\nCapitalized word count: " + capitalCount;
+        }
+        
+        console.log(filterComment("I think this movie was BAD and 100% Stupid! But the Acting was Amazing and 3 actors were great."));
+    
+    </script>
+</body>
+</html>
