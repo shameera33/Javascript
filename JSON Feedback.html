@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+    <script>
+
+    const checkThank = () => {
+
+        try {
+
+            let data = '{"feedback": "Thank you! Great website, very easy to use."}';
+
+            let objFeedback = JSON.parse(data);
+
+            let check = objFeedback.feedback.match(/thank/i);
+
+            let result = check ? true : false;
+
+            console.log("Feedback: " + objFeedback.feedback);
+            console.log("Thank present: " + result);
+
+            let message = result ? "Positive feedback received": "Feedback noted";
+
+            console.log(message);
+
+        } 
+        catch (err) {
+            
+            console.log("Error: Something went wrong!");
+
+        }
+    };
+
+    checkThank();
+
+    </script>
+</body>
+</html>
