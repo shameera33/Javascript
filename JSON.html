@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+
+        const data = '{"name":"John","email":"john@example.com","message":"Hello"}';
+        
+        const showMessage = () => {
+            try {
+                const user = JSON.parse(data);
+                console.log("Message received from " + user.name);
+                console.log("Message: " + user.message);
+            } 
+            catch (error) {
+                console.log("Error: Something went wrong!");
+            }
+        };
+        
+        showMessage();
+    </script>
+</body>
+</html>
